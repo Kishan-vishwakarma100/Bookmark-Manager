@@ -1,0 +1,165 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+/* Attractive Bookmark Manager Heading */
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean and modern font */
+    font-size: 2.5em; /* Larger font size */
+    color: #333; /* Dark text for better readability */
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 1px; /* Subtle letter spacing */
+    padding-bottom: 10px;
+    border-bottom: 3px solid #4CAF50; /* Green underline to match theme */
+    display: inline-block; /* Makes the underline fit tightly to the text */
+    font-weight: 600; /* Bold font for a strong presence */
+}
+
+
+.form {
+    margin: 20px 0;
+}
+
+input, button {
+    padding: 10px;
+    margin: 5px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+input {
+    width: 30%;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Bookmark List Styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Ensures that items wrap instead of overflowing */
+    word-wrap: break-word; /* Prevents long words (like URLs) from overflowing */
+    word-break: break-word; /* Ensures long URLs break correctly */
+}
+
+li a {
+    text-decoration: none;
+    color: #007BFF;
+    word-break: break-word; /* Ensures URLs wrap inside the box */
+    max-width: 80%; /* Prevents URL from stretching too wide */
+    overflow-wrap: break-word; /* Makes the long URLs wrap properly */
+}
+
+li a:hover {
+    text-decoration: underline;
+}
+
+button.delete {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button.delete:hover {
+    background-color: #e60000;
+}
+
+/* Responsive Styles for Mobile Devices */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    input, button {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    input {
+        margin-bottom: 10px;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    ul {
+        padding-left: 0;
+        text-align: left;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    button.delete {
+        margin-top: 10px;
+    }
+}
+
+/* Extra Small Devices (Mobile) */
+@media (max-width: 480px) {
+    input, button {
+        font-size: 12px;
+        width: 100%;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    li {
+        padding: 10px;
+    }
+
+    li a {
+        font-size: 12px;
+    }
+}
